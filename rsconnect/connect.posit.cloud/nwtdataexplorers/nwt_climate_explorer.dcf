@@ -1,0 +1,10 @@
+name: nwt_climate_explorer
+title:
+username: nwtdataexplorers
+account: nwtdataexplorers
+server: connect.posit.cloud
+hostUrl: https://api.connect.posit.cloud/v1
+appId: 019e753b-fece-19a3-d70c-2e164e77ecdb
+bundleId:
+url: https://connect.posit.cloud/nwtdataexplorers/content/019e753b-fece-19a3-d70c-2e164e77ecdb
+version: 1
