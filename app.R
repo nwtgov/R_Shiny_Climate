@@ -1001,7 +1001,7 @@ server <- function(input, output, session) {
         style = "display: flex; align-items: center; padding: 0; margin: 0; box-shadow: none;",
         tags$div(
           class = "navbar-logo-click",
-          style = "display: flex; align-items: center; cursor: pointer;",
+          #style = "display: flex; align-items: center; cursor: pointer;",
           title = if (language() == "fr") "Aller à À propos" else "Go to About",
           onclick = I(sprintf("switchTabOnly('%s');", js_esc)),
           img(
@@ -1022,13 +1022,15 @@ server <- function(input, output, session) {
           title = if (language() == "fr") "Aller à À propos" else "Go to About"
         )
       ),
-      selected = if (!is.null(desired_tab()) && nzchar(desired_tab())) {
-        desired_tab()
-      } else if (language() == "fr") {
-        "À propos"
-      } else {
-        "About"
-      },
+      id = "navbar",
+      selected = if(language() == "fr") "À propos" else "About",
+      # selected = if (!is.null(desired_tab()) && nzchar(desired_tab())) {
+      #   desired_tab()
+      # } else if (language() == "fr") {
+      #   "À propos"
+      # } else {
+      #   "About"
+      # },
       header = tags$div(
         class = "language-toggle-container",
         actionButton(
